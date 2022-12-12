@@ -24,12 +24,12 @@ namespace FindRoommate.ViewModel.Commands
         {
             VM.EmailData.rnd = new Random();
             VM.EmailData.serial = VM.EmailData.rnd.Next(10000, 50001);
-            var message = new MailMessage("sshny1029@jbnu.ac.kr", VM.StudentDataToSignUp.Email);
+            var message = new MailMessage("********@jbnu.ac.kr", VM.StudentDataToSignUp.Email);
             message.Subject = "이메일 인증번호 발송";    //메일의 제목
             message.Body = VM.EmailData.serial.ToString();
             using (SmtpClient mailer = new SmtpClient("smtp.gmail.com", 587))
             {
-                mailer.Credentials = new NetworkCredential("sshny1029@jbnu.ac.kr", "ssh1010123!");
+                mailer.Credentials = new NetworkCredential("********@jbnu.ac.kr", "********");
                 mailer.EnableSsl = true;
                 mailer.Send(message);
             }
