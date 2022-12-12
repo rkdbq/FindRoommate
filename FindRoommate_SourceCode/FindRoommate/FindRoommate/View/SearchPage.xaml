@@ -1,0 +1,259 @@
+﻿<Page x:Class="FindRoommate.View.SearchPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:converters="clr-namespace:FindRoommate.ViewModel.Converters"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="SearchPage">
+    <Page.Resources>
+
+        <converters:TimeToStringConverter x:Key="tToSConv"></converters:TimeToStringConverter>
+
+
+        <Style TargetType="Slider">
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        </Style>
+        <Style TargetType="Label" x:Key="searchLabel">
+            <Setter Property="Width" Value="100"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style TargetType="RadioButton" x:Key="searchRadioButton">
+            <Setter Property="Margin" Value="0 0 5 0"></Setter>
+            <Setter Property="Width" Value="100"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+        </Style>
+        <Style TargetType="CheckBox" x:Key="searchCheckBox">
+            <Setter Property="Width" Value="120"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+            <Setter Property="Margin" Value="0 0 5 0"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+        </Style>
+        <Style TargetType="CheckBox" x:Key="collegeCheckBox" BasedOn="{StaticResource searchCheckBox}">
+            <Setter Property="Width" Value="120"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+            <Setter Property="Margin" Value="0 0 5 0"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="leftTopButton">
+            <Setter Property="Width" Value="60"></Setter>
+            <Setter Property="Height" Value="60"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="Background" Value="White"></Setter>
+            <Setter Property="BorderBrush" Value="White"></Setter>
+        </Style>
+    </Page.Resources>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1.5*"/>
+        </Grid.RowDefinitions>
+
+        <!--logo-->
+        <Image Source="/View/Images/Logo.png" Margin="20 20 20 10"/>
+
+        <!--Search with checkbox-->
+        <Border BorderBrush="Black" BorderThickness="1" CornerRadius="5 0 0 5" Margin="20 10 19 10" Grid.Row ="1" Grid.RowSpan="1" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+
+            <ScrollViewer Margin="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <StackPanel DataContext="{Binding Source={StaticResource studentViewModel}, Path=StudentDataToSearch}" Margin="10">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="상세검색" Width="95" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                        <Button Background="White" BorderBrush="White" Command="{Binding Source={StaticResource  studentViewModel}, Path=RefreshCommand}">
+                            <Image Source="/View/Images/refresh_FILL0_wght400_GRAD0_opsz48.png" Height="20"/>
+                        </Button>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="흡연여부" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                        <RadioButton IsChecked="{Binding DoSmoke}" Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" Content="흡연" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                        <RadioButton Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" Content="비흡연" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="병역여부" FontWeight="Bold" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                        <RadioButton IsChecked="{Binding DidMilitaryService}" Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" Content="군필(면제)" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                        <RadioButton Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" Content="미필" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="연애여부" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                        <RadioButton IsChecked="{Binding HaveLover}" Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" Content="Yes" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                        <RadioButton Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" Content="No" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="국적" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                        <RadioButton IsChecked="{Binding IsKorean}" Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" Content="국내" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                        <RadioButton Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" Content="국외(유학)" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="MBTI" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                        <RadioButton IsChecked="{Binding IsMbtiE}" Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" Content="E" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                        <RadioButton Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" Content="I" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                        <RadioButton IsChecked="{Binding IsMbtiS}" Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" Content="S" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                        <RadioButton Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" Content="N" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                        <RadioButton IsChecked="{Binding IsMbtiT}" Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" Content="T" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                        <RadioButton Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" Content="F" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                        <RadioButton IsChecked="{Binding IsMbtiJ}" Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" Content="J" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                        <RadioButton Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" Content="P" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="취침시간" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                        <Slider Value="{Binding BedTime}"  x:Name="sleepTime" IsSnapToTickEnabled="True" TickFrequency="0.5" Width="120" Minimum="20" Maximum="28"></Slider>
+                        <TextBox Width="30" Height="20" HorizontalContentAlignment="Center" Text="{Binding ElementName=sleepTime, Path=Value, Converter={StaticResource tToSConv}}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="기상시간" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                        <Slider Value="{Binding WakeUpTime}" x:Name="awakeTime" IsSnapToTickEnabled="True" TickFrequency="0.5" Width="120" Minimum="6" Maximum="14"></Slider>
+                        <TextBox Width="30" Height="20" HorizontalContentAlignment="Center" Text="{Binding ElementName=awakeTime, Path=Value}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="청소주기" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                        <Slider Value="{Binding CleaningPerMonth}" x:Name="cleanPeriod" IsSnapToTickEnabled="True" TickFrequency="7" Width="120" Minimum="1" Maximum="30"></Slider>
+                        <TextBox Width="30" Height="20" HorizontalContentAlignment="Center" Text="{Binding ElementName=cleanPeriod, Path=Value}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="잠버릇" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding DoSnore}" Content="코골이" Style="{StaticResource ResourceKey=searchCheckBox}"></CheckBox>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding DoBruise}" Content="이갈이" Style="{StaticResource ResourceKey=searchCheckBox}"></CheckBox>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding DoSleepTalking}" Content="잠꼬대" Style="{StaticResource ResourceKey=searchCheckBox}"></CheckBox>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding DoTossAndTurn}" Content="뒤척임" Style="{StaticResource ResourceKey=searchCheckBox}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="종교" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding ChristianityChecked}" Content="기독교" Style="{StaticResource ResourceKey=searchCheckBox}"></CheckBox>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding CatholicChecked}" Content="천주교" Style="{StaticResource ResourceKey=searchCheckBox}"></CheckBox>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding BuddhismChecked}" Content="불교" Style="{StaticResource ResourceKey=searchCheckBox}"></CheckBox>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding OtherChecked}" Content="기타" Style="{StaticResource ResourceKey=searchCheckBox}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="단과대학" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding 간호Checked}" Content="간호" Style="{StaticResource ResourceKey=collegeCheckBox}"></CheckBox>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding 농업생명과학Checked}" Content="농업생명과학" Style="{StaticResource ResourceKey=collegeCheckBox}"></CheckBox>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding 상과Checked}" Content="상과" Style="{StaticResource ResourceKey=collegeCheckBox}"></CheckBox>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding 약학Checked}" Content="약학" Style="{StaticResource ResourceKey=collegeCheckBox}"></CheckBox>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding 인문Checked}" Content="인문" Style="{StaticResource ResourceKey=collegeCheckBox}"></CheckBox>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding 환경생명자원Checked}" Content="환경생명자원" Style="{StaticResource ResourceKey=collegeCheckBox}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding 공과Checked}" Content="공과" Style="{StaticResource ResourceKey=collegeCheckBox}"></CheckBox>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding 사범Checked}" Content="사범" Style="{StaticResource ResourceKey=collegeCheckBox}"></CheckBox>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding 생활과학Checked}" Content="생활과학" Style="{StaticResource ResourceKey=collegeCheckBox}"></CheckBox>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding 예술Checked}" Content="예술" Style="{StaticResource ResourceKey=collegeCheckBox}"></CheckBox>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding 자연과학Checked}" Content="자연과학" Style="{StaticResource ResourceKey=collegeCheckBox}"></CheckBox>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding 스마트팜학과Checked}" Content="스마트팜학과" Style="{StaticResource ResourceKey=collegeCheckBox}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding 글로벌융합Checked}" Content="글로벌융합" Style="{StaticResource ResourceKey=collegeCheckBox}"></CheckBox>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding 사회과학Checked}" Content="사회과학" Style="{StaticResource ResourceKey=collegeCheckBox}"></CheckBox>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding 수의과Checked}" Content="수의과" Style="{StaticResource ResourceKey=collegeCheckBox}"></CheckBox>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding 의과Checked}" Content="의과" Style="{StaticResource ResourceKey=collegeCheckBox}"></CheckBox>
+                        <CheckBox Command="{Binding Source={StaticResource studentViewModel}, Path=SearchButtonCommand}" IsChecked="{Binding 치과Checked}" Content="치과" Style="{StaticResource ResourceKey=collegeCheckBox}"></CheckBox>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+
+        <!--Search with user's input string-->
+        <Grid DataContext="{Binding Source={StaticResource studentViewModel}}" Grid.Column="1" Grid.ColumnSpan ="3" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="20 0 20 10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <TextBox x:Name="SearchString" PreviewMouseLeftButtonDown="SearchString_PreviewMouseLeftButtonDown" Text="{Binding Path=StudentDataToSearch.SearchText}" FontSize="15" VerticalContentAlignment="Center" Margin="0 0 0 0" Grid.Column="0">
+                <TextBox.InputBindings>
+                    <KeyBinding Command="{Binding SearchButtonCommand}" CommandParameter="{Binding ElementName=SearchString, Path=Text}" Key="Enter"></KeyBinding>
+                    <!--<MouseBinding Command="{Binding Path=SearchStringCommand}" CommandParameter="{Binding ElementName=SearchString}" MouseAction="LeftClick"></MouseBinding>-->
+                </TextBox.InputBindings>
+                <TextBox.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <Button Command="{Binding SearchButtonCommand}" CommandParameter="{Binding ElementName=SearchString, Path=Text}" Margin="10 0 5 0" Grid.Column="2" Background="#13437e">
+                <Image Source="/View/Images/baseline_search_white_24dp.png" Height="25"/>
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+
+        <!--Output of profile-->
+
+        <ScrollViewer Margin="20 0 20 0" Grid.Row="2" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalScrollBarVisibility="auto">
+            <ListView ItemsSource="{Binding Source={StaticResource studentViewModel}, Path=StudentDataToShowProfiles}"
+                      HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                <ListView.ItemTemplate >
+                    <DataTemplate>
+                        <Grid Height="50">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition  Width="4*"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Button Content="{Binding ProfileButtonString}" Command="{Binding Source={StaticResource studentViewModel}, Path=PartnerProfileButtonCommand}" CommandParameter="{Binding}" HorizontalAlignment="Stretch" Margin="0,0,5,0" Grid.Column="0" Background="#13437e" Foreground="#fcfdfc" FontSize="15" FontWeight="Bold" BorderBrush="#13437e">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                            <Button Command="{Binding Source= {StaticResource studentViewModel}, Path=ApplyCommand}" CommandParameter="{Binding Email}" Content="신청" HorizontalAlignment="Stretch" Grid.Column="1" Margin="5,0" Background="MediumAquamarine" Foreground="Green" FontSize="15" FontWeight="Bold" BorderBrush="MediumAquamarine">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                            <Button Command="{Binding Source={StaticResource studentViewModel}, Path=ChattingButtonCommand}" CommandParameter="{Binding Name}"  Content="채팅" HorizontalAlignment="Stretch" Grid.Column="2" Margin="5,0,0,0" Background="#fae331" FontSize="15" FontWeight="Bold" BorderBrush="#fae331">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
+
+        <!--Menu switch-->
+        <Grid Grid.Row="1" Grid.RowSpan="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" Style="{StaticResource leftTopButton}">
+                <Image Source="/View/Images/baseline_person_search_black_24dp.png" />
+            </Button>
+            <Button x:Name="ProfileButton" Style="{StaticResource leftTopButton}" Grid.Row="1" Click="ProfileButton_Click">
+                <Image Source="/View/Images/face_FILL0_wght400_GRAD0_opsz48.png" />
+            </Button>
+        </Grid>
+    </Grid>
+</Page>

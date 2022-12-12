@@ -1,0 +1,235 @@
+﻿<Page x:Class="FindRoommate.View.SignUpPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:converters="clr-namespace:FindRoommate.ViewModel.Converters"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SignUpPage">
+    <Page.Resources>
+        <converters:BoolToStringConverter x:Key="sexSToSConv"></converters:BoolToStringConverter>
+    </Page.Resources>
+    <Grid DataContext="{Binding Source={StaticResource studentViewModel}, Path=StudentDataToSignUp}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="회원가입"
+               Grid.Column="1"
+               Grid.ColumnSpan="2"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"
+               FontSize="25"
+               FontWeight="Black"/>
+
+        <TextBox Grid.Row="1"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}"
+                 Foreground="LightSlateGray"
+                 Margin="5"
+                 VerticalContentAlignment="Center"
+                 HorizontalContentAlignment="Left"
+                 x:Name="emailtxb"
+                 PreviewMouseLeftButtonDown="emailtxb_PreviewMouseLeftButtonDown"
+                 >
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        
+        
+        <TextBox Grid.Row="2"
+                 Grid.Column="1"
+                 Text="{Binding EmailCheck, UpdateSourceTrigger=PropertyChanged}"
+                 Foreground="LightSlateGray"
+                 Margin="5"
+                 VerticalContentAlignment="Center"
+                 HorizontalContentAlignment="Left"
+                 x:Name="emailcheckcode"
+                 PreviewMouseLeftButtonDown="emailcheckcode_PreviewMouseLeftButtonDown">
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox Grid.Row="3"
+                 Grid.Column="1"
+                 Text="{Binding Name,UpdateSourceTrigger=PropertyChanged}"
+                 Foreground="LightSlateGray"
+                 Margin="5"
+                 VerticalContentAlignment="Center"
+                 HorizontalContentAlignment="Left"
+                 x:Name="nametxb"
+                 PreviewMouseLeftButtonDown="nametxb_PreviewMouseLeftButtonDown">
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <RadioButton Grid.Row="3"
+                     Grid.Column="2"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center"
+                     Content="남"
+                     IsChecked="{Binding Sex, Converter={StaticResource sexSToSConv}, ConverterParameter='남'}">
+        </RadioButton>
+        <RadioButton Grid.Row="3"
+                     Grid.Column="3"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center"
+                     Content="여"
+                     IsChecked="{Binding Sex, Converter={StaticResource sexSToSConv}, ConverterParameter='여'}">
+        </RadioButton>
+        <TextBox Grid.Row="4"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}"
+                 Foreground="LightSlateGray"
+                 Margin="5"
+                 VerticalContentAlignment="Center"
+                 HorizontalContentAlignment="Left"
+                 x:Name="pwtxb"
+                 PreviewMouseLeftButtonDown="pwtxb_PreviewMouseLeftButtonDown">
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox Grid.Row="5"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 Text="{Binding PasswordCheck, UpdateSourceTrigger=PropertyChanged}"
+                 Foreground="LightSlateGray"
+                 Margin="5"
+                 VerticalContentAlignment="Center"
+                 HorizontalContentAlignment="Left"
+                 x:Name="pwchecktxb"
+                 PreviewMouseLeftButtonDown="pwchecktxb_PreviewMouseLeftButtonDown">
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox Grid.Row="6"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 Text="{Binding PhoneNumber,UpdateSourceTrigger=PropertyChanged}"
+                 Foreground="LightSlateGray"
+                 Margin="5"
+                 VerticalContentAlignment="Center"
+                 HorizontalContentAlignment="Left"
+                 x:Name="phonenumtxb"
+                 PreviewMouseLeftButtonDown="phonenumtxb_PreviewMouseLeftButtonDown">
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox Grid.Row="7"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 Text="{Binding StudentNumber, UpdateSourceTrigger=PropertyChanged}"
+                 Foreground="LightSlateGray"
+                 Margin="5"
+                 VerticalContentAlignment="Center"
+                 HorizontalContentAlignment="Left"
+                 x:Name="Studentnumtxb"
+                 PreviewMouseLeftButtonDown="Studentnumtxb_PreviewMouseLeftButtonDown">
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <Button Content="발송"
+                Grid.Row="1"
+                Grid.Column="3"
+                Margin="5"
+                Foreground="White"
+                FontWeight="Bold"
+                Background="#13437e"
+                x:Name="EmailCodeSend"
+                Command="{Binding Source={StaticResource studentViewModel}, Path=EmailSendCommand}">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        
+        <Button Content="인증"
+                Grid.Row="2"
+                Grid.Column="2"
+                Margin="5"
+                Foreground="White"
+                FontWeight="Bold"
+                Background="#13437e"
+                x:Name="EmailCodeCheck"
+                Command="{Binding Source={StaticResource studentViewModel}, Path=EmailCheckCommand}">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+       
+        <Button Content="가입"
+                
+                Command="{Binding Source={StaticResource studentViewModel}, Path=SignUpCommand}"
+                Grid.Row="8"
+                Grid.Column="2"
+                Margin="5"
+                Foreground="White"
+                FontWeight="Bold"
+                Background="#13437e"
+                >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="뒤로"
+                x:Name="CancelButton"
+                Click="CancelButton_Click"
+                Grid.Row="8"
+                Grid.Column="3"
+                Margin="5"
+                Foreground="White"
+                FontWeight="Bold"
+                Background="#13437e"
+                >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Page>

@@ -1,0 +1,145 @@
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\View\LogInPage.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\View\LogInWindow.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\View\SignUpPage.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\App.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\FindRoommate_MarkupCompile.cache
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\FindRoommate_MarkupCompile.lref
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\bin\Debug\FindRoommate.exe.config
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\bin\Debug\FindRoommate.exe
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\bin\Debug\FindRoommate.pdb
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\View\LogInPage.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\View\LogInWindow.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\View\SignUpPage.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\FindRoommate.g.resources
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\FindRoommate.Properties.Resources.resources
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\FindRoommate.csproj.GenerateResource.cache
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\FindRoommate.csproj.CoreCompileInputs.cache
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\FindRoommate.exe
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\FindRoommate.pdb
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\bin\Debug\S22.Imap.dll
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\FindRoommate.csproj.CopyComplete
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\App.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\View\MainWindow.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\View\ProfilePage.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\View\UserControls\Profile.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\View\UserControls\ProfileItem.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\View\SearchPage.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\View\MainWindow.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\View\ProfilePage.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\View\UserControls\Profile.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\View\UserControls\ProfileItem.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\View\SearchPage.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\View\ChattingWindow.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\View\UserListWindow.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\View\ChattingWindow.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\View\UserListWindow.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\FindRoommate.csproj.AssemblyReference.cache
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate\FindRoommate\obj\Debug\FindRoommate.csproj.SuggestedBindingRedirects.cache
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\bin\Debug\FindRoommate.exe.config
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\bin\Debug\FindRoommate.exe
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\bin\Debug\FindRoommate.pdb
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\View\ChattingWindow.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\View\LogInPage.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\View\LogInWindow.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\View\MainWindow.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\View\ProfilePage.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\View\SearchPage.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\View\SignUpPage.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\View\UserControls\Profile.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\View\UserControls\ProfileItem.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\View\UserListWindow.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\App.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\FindRoommate_MarkupCompile.cache
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\FindRoommate_MarkupCompile.lref
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\App.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\View\ChattingWindow.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\View\LogInPage.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\View\LogInWindow.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\View\MainWindow.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\View\ProfilePage.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\View\SearchPage.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\View\SignUpPage.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\View\UserControls\Profile.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\View\UserControls\ProfileItem.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\View\UserListWindow.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\FindRoommate.g.resources
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\FindRoommate.Properties.Resources.resources
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\FindRoommate.csproj.GenerateResource.cache
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\FindRoommate.csproj.CoreCompileInputs.cache
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\FindRoommate.csproj.CopyComplete
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\FindRoommate.exe
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\FindRoommate.pdb
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\FindRoommate.csproj.AssemblyReference.cache
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate (2)\FindRoommate\FindRoommate\obj\Debug\FindRoommate.csproj.SuggestedBindingRedirects.cache
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\bin\Debug\FindRoommate.exe.config
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\bin\Debug\FindRoommate.exe
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\bin\Debug\FindRoommate.pdb
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\View\ChattingWindow.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\View\LogInPage.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\View\LogInWindow.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\View\MainWindow.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\View\ProfilePage.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\View\SearchPage.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\View\SignUpPage.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\View\UserControls\Profile.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\App.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\FindRoommate_MarkupCompile.cache
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\FindRoommate_MarkupCompile.lref
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\App.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\View\ChattingWindow.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\View\LogInPage.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\View\LogInWindow.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\View\MainWindow.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\View\ProfilePage.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\View\SearchPage.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\View\SignUpPage.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\View\UserControls\Profile.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\FindRoommate.g.resources
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\FindRoommate.Properties.Resources.resources
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\FindRoommate.csproj.GenerateResource.cache
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\FindRoommate.csproj.CoreCompileInputs.cache
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\FindRoommate.csproj.CopyComplete
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\FindRoommate.exe
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\FindRoommate.pdb
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\View\PartnerProfileWindow.g.cs
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\View\PartnerProfileWindow.baml
+C:\Users\ALPS-1\Desktop\FindRoommate\FindRoommate_0612\FindRoommate\FindRoommate\obj\Debug\FindRoommate.csprojAssemblyReference.cache
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\bin\Debug\FindRoommate.exe.config
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\bin\Debug\FindRoommate.exe
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\bin\Debug\FindRoommate.pdb
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\bin\Debug\S22.Imap.dll
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\FindRoommate.csproj.AssemblyReference.cache
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\FindRoommate.csproj.SuggestedBindingRedirects.cache
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\View\LogInPage.baml
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\View\LogInWindow.baml
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\View\MainWindow.baml
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\View\ChattingWindow.g.cs
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\View\LogInPage.g.cs
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\View\LogInWindow.g.cs
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\View\MainWindow.g.cs
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\View\PartnerProfileWindow.g.cs
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\View\ProfilePage.g.cs
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\View\SearchPage.g.cs
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\View\SignUpPage.g.cs
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\View\UserControls\Profile.g.cs
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\App.g.cs
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\FindRoommate_MarkupCompile.cache
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\FindRoommate_MarkupCompile.lref
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\App.baml
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\View\ChattingWindow.baml
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\View\PartnerProfileWindow.baml
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\View\ProfilePage.baml
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\View\SearchPage.baml
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\View\SignUpPage.baml
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\View\UserControls\Profile.baml
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\FindRoommate.g.resources
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\FindRoommate.Properties.Resources.resources
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\FindRoommate.csproj.GenerateResource.cache
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\FindRoommate.csproj.CoreCompileInputs.cache
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\FindRoommate.csproj.CopyComplete
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\FindRoommate.exe
+C:\Users\ALPS-1\Desktop\구해줘!룸메\FindRoommate\FindRoommate\obj\Debug\FindRoommate.pdb

@@ -1,0 +1,10 @@
+﻿<Application x:Class="FindRoommate.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FindRoommate"
+             xmlns:vm="clr-namespace:FindRoommate.ViewModel"
+             StartupUri="/View/LogInWindow.xaml">
+    <Application.Resources>
+        <vm:StudentViewModel x:Key="studentViewModel"/>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,290 @@
+﻿<Page x:Class="FindRoommate.View.ProfilePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:userControls="clr-namespace:FindRoommate.View.UserControls"
+      xmlns:converters="clr-namespace:FindRoommate.ViewModel.Converters"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="ProfilePage">
+    <Page.Resources>
+
+        <converters:BoolToStringConverter x:Key="religionBToSConv"></converters:BoolToStringConverter>
+        <converters:BoolToStringConverter x:Key="collegeBToSConv"></converters:BoolToStringConverter>
+        <converters:TimeToStringConverter x:Key="tToSConv"></converters:TimeToStringConverter>
+        <converters:NegationConverter x:Key="nConv"></converters:NegationConverter>
+
+        <Style TargetType="Button" x:Key="leftTopButton">
+            <Setter Property="Width" Value="60"></Setter>
+            <Setter Property="Height" Value="60"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="Background" Value="White"></Setter>
+            <Setter Property="BorderBrush" Value="White"></Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="editInfoButton">
+            <Setter Property="Width" Value="40"></Setter>
+            <Setter Property="Height" Value="25"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style TargetType="Label" x:Key="personalInfo">
+            <Setter Property="Width" Value="250"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style TargetType="Label" x:Key="domitory">
+            <Setter Property="Width" Value="250"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="FontWeight" Value="ExtraBold"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+            <Setter Property="Margin" Value="0 0 0 10"></Setter>
+        </Style>
+        <Style TargetType="RadioButton">
+            <Setter Property="Margin" Value="0 0 5 0"></Setter>
+            <Setter Property="Width" Value="70"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+        </Style>
+
+        <Style TargetType="Label" x:Key="searchLabel">
+            <Setter Property="Width" Value="100"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style TargetType="RadioButton" x:Key="searchRadioButton">
+            <Setter Property="Margin" Value="0 0 5 0"></Setter>
+            <Setter Property="Width" Value="100"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+        </Style>
+        <Style TargetType="CheckBox" x:Key="searchCheckBox">
+            <Setter Property="Width" Value="120"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+            <Setter Property="Margin" Value="0 0 5 0"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+        </Style>
+        <Style TargetType="RadioButton" x:Key="collageRadioButton" BasedOn="{StaticResource searchRadioButton}">
+            <Setter Property="Width" Value="120"></Setter>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1.5*"/>
+        </Grid.RowDefinitions>
+
+        <!--Logo-->
+        <Image Source="/View/Images/Logo.png" Margin="20"/>
+
+        <!--Show or hide my personal info.-->
+        <Border BorderBrush="Black" BorderThickness="1" CornerRadius="5" Grid.Row ="0" Grid.RowSpan="1" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10 20 20 0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel DataContext="{Binding Source= {StaticResource studentViewModel}, Path=StudentDataToLogIn}" Margin="10" Grid.ColumnSpan="2">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{Binding Name}" Style="{StaticResource personalInfo}"></Label>
+                        <RadioButton x:Name="name" Content="공개" IsChecked="{Binding IsNameVisible}" VerticalContentAlignment="Center"></RadioButton>
+                        <RadioButton Content="비공개" VerticalContentAlignment="Center" IsChecked="{Binding IsNameVisible, Converter={StaticResource nConv}}"></RadioButton>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label x:Name="studentNumber" Content="{Binding StudentNumber }" Style="{StaticResource personalInfo}"></Label>
+                        <RadioButton Content="공개" IsChecked="{Binding IsStudentNumberVisible}" VerticalContentAlignment="Center"></RadioButton>
+                        <RadioButton Content="비공개" IsChecked="{Binding IsStudentNumberVisible, Converter={StaticResource nConv}}" VerticalContentAlignment="Center"></RadioButton>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label x:Name="Email" Content="{Binding Email}"  Style="{StaticResource personalInfo}"></Label>
+                        <RadioButton Content="공개" IsChecked="{Binding IsEmailVisible}" VerticalContentAlignment="Center"></RadioButton>
+                        <RadioButton Content="비공개" IsChecked="{Binding IsEmailVisible, Converter={StaticResource nConv}}" VerticalContentAlignment="Center"></RadioButton>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{Binding PhoneNumber}"  Style="{StaticResource personalInfo}"></Label>
+                        <RadioButton Content="공개" IsChecked="{Binding IsPhoneNumberVisible}" VerticalContentAlignment="Center"></RadioButton>
+                        <RadioButton Content="비공개" IsChecked="{Binding IsPhoneNumberVisible, Converter={StaticResource nConv}}" VerticalContentAlignment="Center"></RadioButton>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Column="2" HorizontalAlignment="Right">
+                    <Button Content="저장" Command="{Binding Source={StaticResource studentViewModel}, Path=SaveButtonCommand}" CommandParameter="topBox" Style="{StaticResource editInfoButton}" Foreground="#13437e" Background="#fcfdfc" Grid.Column="2" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10 10 20 10">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    
+                </StackPanel>
+
+            </Grid>
+        </Border>
+
+        <!--Tab menu and output of profile-->
+        <TabControl Grid.Row="1" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="3" Margin="10 20 20 20">
+            <TabControl.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="0 5 5 5"/>
+                </Style>
+            </TabControl.Resources>
+            <TabItem Header="현재 학기" FontSize="15">
+                <Border BorderBrush="Black" CornerRadius="0" BorderThickness="1" Grid.Row ="1" Grid.RowSpan="1" Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
+                    <ScrollViewer Margin="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                        <StackPanel Margin="10" DataContext="{Binding Source={StaticResource studentViewModel}, Path=StudentDataToLogIn}">
+                            <Label Content="새빛관" Style="{StaticResource domitory}"></Label>
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="흡연여부" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                                    <RadioButton IsChecked="{Binding DoSmoke}" Content="흡연" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                                    <RadioButton IsChecked="{Binding DoSmoke, Converter={StaticResource nConv}}" Content="비흡연" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="병역여부" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                                    <RadioButton IsChecked="{Binding DidMilitaryService}" Content="군필(면제)" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                                    <RadioButton IsChecked="{Binding DidMilitaryService, Converter={StaticResource nConv}}" Content="미필" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="연애여부" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                                    <RadioButton IsChecked="{Binding HaveLover}" Content="Yes" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                                    <RadioButton IsChecked="{Binding HaveLover, Converter={StaticResource nConv}}" Content="No" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="국적" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                                    <RadioButton IsChecked="{Binding IsKorean}" Content="국내" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                                    <RadioButton IsChecked="{Binding IsKorean, Converter={StaticResource nConv}}" Content="국외(유학)" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="MBTI" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                                    <RadioButton IsChecked="{Binding IsMbtiE}" Content="E" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                                    <RadioButton IsChecked="{Binding IsMbtiE, Converter={StaticResource nConv}}" Content="I" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                                    <RadioButton IsChecked="{Binding IsMbtiS}" Content="S" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                                    <RadioButton IsChecked="{Binding IsMbtiS, Converter={StaticResource nConv}}" Content="N" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                                    <RadioButton IsChecked="{Binding IsMbtiT}" Content="T" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                                    <RadioButton IsChecked="{Binding IsMbtiT, Converter={StaticResource nConv}}" Content="F" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                                    <RadioButton IsChecked="{Binding IsMbtiJ}" Content="J" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                                    <RadioButton IsChecked="{Binding IsMbtiJ, Converter={StaticResource nConv}}" Content="P" Style="{StaticResource ResourceKey=searchRadioButton}"></RadioButton>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="취침시간" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                                    <Slider Value="{Binding BedTime}" x:Name="sleepTime" VerticalAlignment="Center" IsSnapToTickEnabled="True" TickFrequency="0.5" Width="120" Minimum="20" Maximum="28"></Slider>
+                                    <TextBox Width="30" Height="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="{Binding ElementName=sleepTime, Path=Value, Converter={StaticResource tToSConv}}"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="기상시간" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                                    <Slider Value="{Binding WakeUpTime}" x:Name="awakeTime" VerticalAlignment="Center" IsSnapToTickEnabled="True"  TickFrequency="0.5" Width="120" Minimum="6" Maximum="14"></Slider>
+                                    <TextBox Width="30" Height="20" HorizontalContentAlignment="Center" Text="{Binding ElementName=awakeTime, Path=Value, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="청소주기" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                                    <Slider Value="{Binding CleaningPerMonth}" x:Name="cleanPeriod" VerticalAlignment="Center" IsSnapToTickEnabled="True" TickFrequency="7" Width="120" Minimum="1" Maximum="30"></Slider>
+                                    <TextBox Width="30" Height="20" HorizontalContentAlignment="Center" Text="{Binding ElementName=cleanPeriod, Path=Value, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="잠버릇" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                                    <CheckBox IsChecked="{Binding DoSnore}" Content="코골이" Style="{StaticResource ResourceKey=searchCheckBox}"></CheckBox>
+                                    <CheckBox IsChecked="{Binding DoBruise}" Content="이갈이" Style="{StaticResource ResourceKey=searchCheckBox}"></CheckBox>
+                                    <CheckBox IsChecked="{Binding DoSleepTalking}" Content="잠꼬대" Style="{StaticResource ResourceKey=searchCheckBox}"></CheckBox>
+                                    <CheckBox IsChecked="{Binding DoTossAndTurn}" Content="뒤척임" Style="{StaticResource ResourceKey=searchCheckBox}"></CheckBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="종교" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                                    <RadioButton IsChecked="{Binding Religion, Converter={StaticResource religionBToSConv}, ConverterParameter='기독교'}" Content="기독교" Style="{StaticResource ResourceKey=collageRadioButton}"></RadioButton>
+                                    <RadioButton IsChecked="{Binding Religion, Converter={StaticResource religionBToSConv}, ConverterParameter='천주교'}" Content="천주교" Style="{StaticResource ResourceKey=collageRadioButton}"></RadioButton>
+                                    <RadioButton IsChecked="{Binding Religion, Converter={StaticResource religionBToSConv}, ConverterParameter='불교'}" Content="불교" Style="{StaticResource ResourceKey=collageRadioButton}"></RadioButton>
+                                    <RadioButton IsChecked="{Binding Religion, Converter={StaticResource religionBToSConv}, ConverterParameter='기타'}" Content="기타" Style="{StaticResource ResourceKey=collageRadioButton}"></RadioButton>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="단과대학" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                                    <RadioButton IsChecked="{Binding College, Converter={StaticResource collegeBToSConv}, ConverterParameter='간호'}" Content="간호" Style="{StaticResource ResourceKey=collageRadioButton}" GroupName="college"></RadioButton>
+                                    <RadioButton IsChecked="{Binding College, Converter={StaticResource collegeBToSConv}, ConverterParameter='농업생명과학'}" Content="농업생명과학" Style="{StaticResource ResourceKey=collageRadioButton}" GroupName="college"></RadioButton>
+                                    <RadioButton IsChecked="{Binding College, Converter={StaticResource collegeBToSConv}, ConverterParameter='상과'}" Content="상과" Style="{StaticResource ResourceKey=collageRadioButton}" GroupName="college"></RadioButton>
+                                    <RadioButton IsChecked="{Binding College, Converter={StaticResource collegeBToSConv}, ConverterParameter='약학'}" Content="약학" Style="{StaticResource ResourceKey=collageRadioButton}" GroupName="college"></RadioButton>
+                                    <RadioButton IsChecked="{Binding College, Converter={StaticResource collegeBToSConv}, ConverterParameter='인문'}" Content="인문" Style="{StaticResource ResourceKey=collageRadioButton}" GroupName="college"></RadioButton>
+                                    <RadioButton IsChecked="{Binding College, Converter={StaticResource collegeBToSConv}, ConverterParameter='환경생명자원'}" Content="환경생명자원" Style="{StaticResource ResourceKey=collageRadioButton}" GroupName="college"></RadioButton>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                                    <RadioButton IsChecked="{Binding College, Converter={StaticResource collegeBToSConv}, ConverterParameter='공과'}" Content="공과" Style="{StaticResource ResourceKey=collageRadioButton}" GroupName="college"></RadioButton>
+                                    <RadioButton IsChecked="{Binding College, Converter={StaticResource collegeBToSConv}, ConverterParameter='사범'}" Content="사범" Style="{StaticResource ResourceKey=collageRadioButton}" GroupName="college"></RadioButton>
+                                    <RadioButton IsChecked="{Binding College, Converter={StaticResource collegeBToSConv}, ConverterParameter='생활과학'}" Content="생활과학" Style="{StaticResource ResourceKey=collageRadioButton}" GroupName="college"></RadioButton>
+                                    <RadioButton IsChecked="{Binding College, Converter={StaticResource collegeBToSConv}, ConverterParameter='예술'}" Content="예술" Style="{StaticResource ResourceKey=collageRadioButton}" GroupName="college"></RadioButton>
+                                    <RadioButton IsChecked="{Binding College, Converter={StaticResource collegeBToSConv}, ConverterParameter='자연과학'}" Content="자연과학" Style="{StaticResource ResourceKey=collageRadioButton}" GroupName="college"></RadioButton>
+                                    <RadioButton IsChecked="{Binding College, Converter={StaticResource collegeBToSConv}, ConverterParameter='스마트팜학과'}" Content="스마트팜학과" Style="{StaticResource ResourceKey=collageRadioButton}" GroupName="college"></RadioButton>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="" Style="{StaticResource ResourceKey=searchLabel}"></Label>
+                                    <RadioButton IsChecked="{Binding College, Converter={StaticResource collegeBToSConv}, ConverterParameter='글로벌융합'}" Content="글로벌융합" Style="{StaticResource ResourceKey=collageRadioButton}" GroupName="college"></RadioButton>
+                                    <RadioButton IsChecked="{Binding College, Converter={StaticResource collegeBToSConv}, ConverterParameter='사회과학'}" Content="사회과학" Style="{StaticResource ResourceKey=collageRadioButton}" GroupName="college"></RadioButton>
+                                    <RadioButton IsChecked="{Binding College, Converter={StaticResource collegeBToSConv}, ConverterParameter='수의과'}" Content="수의과" Style="{StaticResource ResourceKey=collageRadioButton}" GroupName="college"></RadioButton>
+                                    <RadioButton IsChecked="{Binding College, Converter={StaticResource collegeBToSConv}, ConverterParameter='의과'}" Content="의과" Style="{StaticResource ResourceKey=collageRadioButton}" GroupName="college"></RadioButton>
+                                    <RadioButton IsChecked="{Binding College, Converter={StaticResource collegeBToSConv}, ConverterParameter='치과'}" Content="치과" Style="{StaticResource ResourceKey=collageRadioButton}" GroupName="college"></RadioButton>
+                                </StackPanel>
+
+                            </StackPanel>
+                            <Button Content="저장" Command="{Binding Source={StaticResource studentViewModel}, Path=SaveButtonCommand}" CommandParameter="bottomBox" Style="{StaticResource editInfoButton}" Foreground="#13437e" Background="#fcfdfc" HorizontalAlignment="Right">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+            </TabItem>
+            <TabItem Header="이전 학기" FontSize="15">
+                <Border BorderBrush="Black" CornerRadius="0" BorderThickness="1" Grid.Row ="1" Grid.RowSpan="1" Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
+                    <ScrollViewer Margin="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                        <StackPanel Margin="10">
+                            <Label Content="한빛관" Style="{StaticResource domitory}"></Label>
+                            <userControls:Profile></userControls:Profile>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+            </TabItem>
+            <TabItem Header="이전 학기(룸메이트)" FontSize="15">
+                <Border BorderBrush="Black" CornerRadius="0" BorderThickness="1" Grid.Row ="1" Grid.RowSpan="1" Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
+                    <ScrollViewer Margin="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                        <StackPanel Margin="10">
+                            <Label Content="한빛관" Style="{StaticResource domitory}"></Label>
+                            <userControls:Profile></userControls:Profile>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+            </TabItem>
+        </TabControl>
+
+        <!--Menu switch-->
+        <Grid Grid.Row="1" Grid.RowSpan="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button x:Name="SearchButton" Grid.Row="0" Style="{StaticResource leftTopButton}" Click="SearchButton_Click">
+                <Image Source="/View/Images/baseline_person_search_black_24dp.png" />
+            </Button>
+            <Button Style="{StaticResource leftTopButton}" Grid.Row="1">
+                <Image Source="/View/Images/face_FILL0_wght400_GRAD0_opsz48.png" />
+            </Button>
+        </Grid>
+    </Grid>
+</Page>
