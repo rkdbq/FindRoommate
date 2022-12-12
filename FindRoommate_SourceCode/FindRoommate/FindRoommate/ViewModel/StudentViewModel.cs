@@ -7,7 +7,7 @@ namespace FindRoommate.ViewModel
 {
     public class StudentViewModel
     {
-        public string Cnnstr = "Server=210.117.180.72,1433;Database=LogIn_DB;User Id=findroommate;Password=12341234;";
+        public string Cnnstr = "Server=210.117.180.72,****;Database=LogIn_DB;User Id=findroommate;Password=********;";
         
         public ObservableCollection<ChattingModel> MessageList { get; set; }
 
